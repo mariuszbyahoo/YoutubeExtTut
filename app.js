@@ -11,12 +11,19 @@ Ext.application({
     requires: [
         'YoutubeExtTut.view.main.Main'
     ],
+    launch: function () {
+        viewport=Ext.getCmp('viewport');
+        target=viewport.down('#viewport-target');
+        view=Ext.create('YoutubeExtTut.view.main.Main');
+        target.add(view)
+    },
 
     // The name of the initial view to create. With the classic toolkit this class
     // will gain a "viewport" plugin if it does not extend Ext.Viewport. With the
     // modern toolkit, the main view will be added to the Viewport.
     //
-    mainView: 'YoutubeExtTut.view.main.Main'
+    mainView: 'YoutubeExtTut.view.main.Main',
+    autoCreateViewport: true
 
     //-------------------------------------------------------------------------
     // Most customizations should be made to YoutubeExtTut.Application. If you need to
