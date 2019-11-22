@@ -14,7 +14,7 @@ Ext.application({
     launch: function () {
         viewport=Ext.getCmp('viewport');
         target=viewport.down('#viewport-target');
-        view=Ext.create('YoutubeExtTut.view.main.Main');
+        view=Ext.create('YoutubeExtTut.view.main.Extra');
         target.add(view)
     },
 
@@ -22,7 +22,7 @@ Ext.application({
     // will gain a "viewport" plugin if it does not extend Ext.Viewport. With the
     // modern toolkit, the main view will be added to the Viewport.
     //
-    mainView: 'YoutubeExtTut.view.main.Main',
+    mainView: 'YoutubeExtTut.view.main.Extra',
     autoCreateViewport: true
 
     //-------------------------------------------------------------------------
