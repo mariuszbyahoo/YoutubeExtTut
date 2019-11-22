@@ -58,7 +58,7 @@ Ext.define('YoutubeExtTut.view.main.Main', {
     },
 
     defaults: {
-        bodyPadding: 20,
+        bodyPadding: 5,
         tabConfig: {
             responsiveConfig: {
                 wide: {
@@ -79,14 +79,15 @@ Ext.define('YoutubeExtTut.view.main.Main', {
         iconCls: 'fa-home',
         // The following grid shares a store with the classic version's grid as well!
         items: [{
-            xtype: 'mainlist'
+            xtype: 'Extra'
         }]
     }, {
         title: 'Users',
         iconCls: 'fa-user',
-        bind: {
-            html: '{loremIpsum}'
-        }
+        xtype: 'Extra'
+        // bind: {
+        //     html: '{loremIpsum}'
+        // }
     }, {
         title: 'Groups',
         iconCls: 'fa-users',
